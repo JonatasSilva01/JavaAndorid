@@ -1,4 +1,4 @@
-package com.example.project1;
+package com.example.myaplicationimage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +13,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button buttonAddImage = findViewById(R.id.buttonAddImg);
+        ImageView imgView = findViewById(R.id.imgView);
+
+        buttonAddImage.setOnClickListener(v -> {
+            //traz uma imagem da pasta drawable
+          imgView.setImageResource(R.drawable.ic_launcher_foreground);
+        });
     }
-
-    Button buttonAddImage = findViewById(R.id.buttonAddImage);
-    ImageView imageView = findViewById(R.id.imageView);
-
 }
